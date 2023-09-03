@@ -9,7 +9,7 @@ cy.visit("https://rahulshettyacademy.com/seleniumPractise/#/");
 // Get element
 cy.get('.search-keyword').type('Ca')
 // Wait timer
-cy.wait(4000)
+cy.wait(2000)
 // Assertion (Visiblity Check)
 cy.get('.product:visible').should('have.length', 4)
 // Parent Child Chaining (Using Find Mehtod with get)
@@ -27,10 +27,40 @@ cy.get('.products').find('.product').each(($el, index, $lis) => {
     cy.wrap($el).contains('ADD TO CART').click()
 
   }
-  
+})
+// Asynchronus Nature of Cypress JS 
+console.log('Asynchronus')
+//Manually Resolving this Example
 
+
+// Optimizing JS - Aliasing (Act as a variable - Product Locator)
+cy.get('.products').as('productLocator')
+cy.get('@productLocator').find('.product').should('have.length', 4)
+
+// Cypress Logging (Logging the Brand name)
+  
+  //Printing in logs
+cy.get('.brand').then(function (logoelement) {
+  
+  cy.log(logoelement.text())
 
 })
+
+  //Assertion for the log 
+  cy.get('.brand').should('have.text', 'GREENKART')
+
+const logo = cy.get('.brand')
+
+// Moving on the Application - Proceed to Checkout and Place Order
+cy.get('.cart-icon > img').click()
+cy.get('.cart-preview > .action-block > button').click()
+cy.contains('Place Order').click().should('have Text', 'Place Order')
+
+
+
+
+
+
 
 } )
 
