@@ -1,9 +1,9 @@
-// Automating Web Application with Complex Scenarios
+// Alert Window Navigation      
  
-describe('My Second Test Suite', function() 
+describe('My Third Test Suite', function() 
 {
  
-it('My FirstTest case',function() {
+it('Browser Alert Window',function() {
  
 //Check boxes
 cy.visit("https://rahulshettyacademy.com/AutomationPractice/")
@@ -27,13 +27,14 @@ cy.on('window:confirm',(str)=>
     expect(str).to.equal('Hello , Are you sure you want to confirm?')
 })
  
-// Opening a New Tab with same url
-cy.get('#opentab').invoke('removeAttr','target').click()
-cy.wait(2000)
-// Asseriting the url is the same or not  
-cy.url().should('include','qaclickacademy')
-// go back
-cy.go('back')
+// This wont work due to same origin policy. -------- Similar Example with same origin got executed in Test5 
+// // Opening a New Tab with same url
+// cy.get('#opentab').invoke('removeAttr','target').click()
+// cy.wait(2000)
+// // Asseriting the url is the same or not  
+// cy.url().should('include','qaclickacademy')
+// // go back
+// // cy.go('back')
  
  
  

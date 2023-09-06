@@ -1,8 +1,10 @@
+// Initial Navigation Web Application
+
 describe('First Tets Suite', function()
 {
 
 
-it('First Test Case', function() 
+it('Initalization and Product Navigation', function() 
 {
 // Url Navigation
 cy.visit("https://rahulshettyacademy.com/seleniumPractise/#/");

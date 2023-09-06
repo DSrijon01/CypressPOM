@@ -4,7 +4,7 @@ describe('First Tets Suite', function()
 {
 
 
-it('Testing Scenarios', function() 
+it('Testing Scenarios Button Boxes Search', function() 
 {
 // Url Navigation
 cy.visit("https://rahulshettyacademy.com/AutomationPractice/");
@@ -49,7 +49,7 @@ cy.get('#displayed-text').should('be.visible')
 // Radio Button Checking with custom CSS
 cy.get('[value="radio2"]').check().should('be.checked')
 
-// Switching Tabs 
+// Switching Tabs --- Check Test4 
 
 
 
