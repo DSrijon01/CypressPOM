@@ -2,5 +2,6 @@
   "id": 8739,
   "name": "Jane",
   "gender":"Female",
-  "email": "jane@example.com"
+  "email": "jane@example.com",
+  "productName": ["Blackberry","Nokia Edge"]
 }
