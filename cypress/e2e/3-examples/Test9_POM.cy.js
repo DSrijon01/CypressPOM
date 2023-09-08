@@ -26,9 +26,9 @@ homePage.getGenderSelector().select(this.data.gender)
 homePage.getTwoWayDataBinding().should('have.value',this.data.name)
 homePage.getEditBox().should('have.attr','minlength','2')
 homePage.getRadioButtonStates();
-    cy.get('#inlineRadio1').should('be.enabled')
-    cy.get('#inlineRadio2').should('be.enabled')
-    cy.get('#inlineRadio3').should('be.disabled')
+    // cy.get('#inlineRadio1').should('be.enabled')
+    // cy.get('#inlineRadio2').should('be.enabled')
+    // cy.get('#inlineRadio3').should('be.disabled')
   
 
 cy.pause()
