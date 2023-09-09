@@ -9,9 +9,9 @@
     classname - ".classname"
     Tag name - tagname.classname // tagname[attribute=value] -->
     
-# Introduction
-- Add your project logo.
-- Write a short introduction to the project.
+# Test Automation With Cypress
+- <code><img height="30" src="https://raw.githubusercontent.com/github/explore/80688e429a7d4ef2fca1e82350fe8e3517d3494d/topics/javascript/javascript.png"></code>
+- <code><img height="30" src="https://github.com/simple-icons/simple-icons/blob/master/icons/cypress.svg"></code>
 - If you are using badges, add them here.
 
 ## :ledger: Index
