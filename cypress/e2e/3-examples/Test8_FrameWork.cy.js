@@ -16,11 +16,15 @@ describe('My eighth Test Suite', function() {
         // Navigate to the test site
         cy.visit("https://rahulshettyacademy.com/angularpractice/")
 
-        // Navigate and Assert Login
+        // Autofill name from fixture data
         cy.get(':nth-child(1) > .form-control').type(this.data.name)
-        cy.get('select').select(this.data.gender)
-        //Assertion for name
+        // Assertion for name Autofill 
         cy.get(':nth-child(1) > .form-control').should('have.value', this.data.name)
+        // Autofill gender from fixture data
+        cy.get('select').select(this.data.gender)
+        //Assertion for two way data binding
+        cy.get( ':nth-child(4) > .ng-untouched').should('have.value', this.data.name) 
+        // Assertion for name value. Minimum 2 characters.
         cy.get(':nth-child(1) > .form-control').should('have.attr', 'minlength', '2')
         // Inline Radio Button Disbled or enabled
         cy.get('#inlineRadio1').should('be.enabled')
