@@ -1,10 +1,13 @@
 // Test with Cypress Page Object Model
 /// <reference types="Cypress" />
+// Import Page Objects
 import HomePage from '../POM_PageobjectModel/HomePage.cy'
 import ProductPage from '../POM_PageobjectModel/ProductPage.cy'
-describe('My Second Test Suite', function() 
-{
 
+
+describe('My Ninth Test Suite', function() 
+{
+// Fetcching Relevant Data From Fixture
     before(function() {
         // runs once before all tests in the block
         cy.fixture('profile').then(function(data)
@@ -17,22 +20,21 @@ this.data=data
 
 it('My Ninth Test case',function() {
  
-const homePage=new HomePage()
-const productPage=new ProductPage()
+const homePage = new HomePage()
+const productPage = new ProductPage()
     cy.visit("https://rahulshettyacademy.com/angularpractice/")
 
+// cContinuing from Test8 without locators using Page Object Model
 homePage.getEditBox().type(this.data.name)
 homePage.getGenderSelector().select(this.data.gender)
 homePage.getTwoWayDataBinding().should('have.value',this.data.name)
 homePage.getEditBox().should('have.attr','minlength','2')
 homePage.getRadioButtonStates();
-  
 
-cy.pause()
+// Default timeout change for whole testsuite 
 Cypress.config('defaultCommandTimeout', 8000)
+// Continuing from Test8 click on shop tab using page object model
 homePage.getShopTab().click()
-
-
 
 this.data.productName.forEach(function(element) {
  
@@ -61,6 +63,8 @@ cy.get('h3 strong').then(function(element)
    expect(Number(total)).to.equal(sum)
 
 })
+
+
   cy.contains('Checkout').click()
   cy.get('#country').type('India')
   cy.get('.suggestions > ul > li > a').click()
