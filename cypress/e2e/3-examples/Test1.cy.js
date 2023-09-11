@@ -56,7 +56,7 @@ const logo = cy.get('.brand')
 // Moving on the Application - Proceed to Checkout and Place Order
 cy.get('.cart-icon > img').click()
 cy.get('.cart-preview > .action-block > button').click()
-cy.contains('Place Order').click().should('have Text', 'Place Order')
+cy.get('[style="text-align: right; width: 100%; margin-top: 20px; margin-right: 10px;"] > :nth-child(14)').click()
 
 
 

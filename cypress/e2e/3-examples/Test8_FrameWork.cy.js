@@ -27,7 +27,7 @@ describe('My eighth Test Suite', function() {
         cy.get( ':nth-child(4) > .ng-untouched').should('have.value', this.data.name) 
         // Assertion for name value. Minimum 2 characters.
         cy.get(':nth-child(1) > .form-control').should('have.attr', 'minlength', '2')
-        // Inline Radio Button Disbled or enabled
+        // Inline Radio Button Disbled or enabled Assertion
         cy.get('#inlineRadio1').should('be.enabled')
         cy.get('#inlineRadio2').should('be.enabled')
         cy.get('#inlineRadio3').should('be.disabled')
@@ -66,7 +66,6 @@ describe('My eighth Test Suite', function() {
         cy.get(':nth-child(3) > .col-sm-8').should('contain.text', 'iphone X');
 
         // cy.pause()
-        
         
         // Declaring Variable that will store the added up values/price
         var sum = 0 
