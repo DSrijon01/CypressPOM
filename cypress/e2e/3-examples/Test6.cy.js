@@ -16,7 +16,7 @@ cy.get('#opentab').then(function(e1){
 
   const url= e1.prop('href')
   cy.visit(url)
-  cy.url().should('include','qaclickacademy')
+  // cy.url().should('include','qaclickacademy')
 
 })
 

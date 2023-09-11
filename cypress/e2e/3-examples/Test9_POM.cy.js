@@ -67,6 +67,7 @@ cy.get('h3 strong').then(function(element)
 
   cy.contains('Checkout').click()
   cy.get('#country').type('India')
+  cy.wait(6000)
   cy.get('.suggestions > ul > li > a').click()
   cy.get('#checkbox2').click({force: true})
   cy.get('input[type="submit"]').click()
