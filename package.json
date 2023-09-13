@@ -12,6 +12,7 @@
   "author": "",
   "license": "ISC",
   "devDependencies": {
+    "@cypress/browserify-preprocessor": "^3.0.2",
     "cypress": "^13.0.0",
     "cypress-iframe": "^1.0.1",
     "mochawesome": "^7.1.3"
