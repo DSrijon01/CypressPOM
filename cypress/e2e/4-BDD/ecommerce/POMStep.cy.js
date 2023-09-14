@@ -1,7 +1,9 @@
+/// <reference types="Cypress" />
+// Cumcumber preprocessor import has issues with sub folder use the one below like structure. -- needs to get out of sub folder to match the path in this case its 2.
+import HomePage from '../../POM_PageobjectModel/HomePage.cy.js'
+import ProductPage from '../../POM_PageobjectModel/ProductPage.cy.js'
 const { Given, When, Then } = require("@badeball/cypress-cucumber-preprocessor");
-// / <reference types="Cypress" />
-import {HomePage} from 'cypress\e2e\POM_PageobjectModel\HomePage.cy.js'
-import {ProductPage} from 'cypress\e2e\POM_PageobjectModel\ProductPage.cy.js';
+
 const homePage = new HomePage()
 const productPage = new ProductPage()
 
