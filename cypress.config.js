@@ -7,6 +7,7 @@ async function setupNodeEvents(on, config) {
   await preprocessor.addCucumberPreprocessorPlugin(on, config);
 
   on("file:preprocessor", browserify.default(config));
+  
 
   // Make sure to return the config object as it might have been modified by the plugin.
   return config;
@@ -15,5 +16,9 @@ module.exports = defineConfig({
   projectId: 'vun133',
   e2e: {
     setupNodeEvents,
+    specPattern: "**/*.feature"
+    
   },
+
+  
 });
