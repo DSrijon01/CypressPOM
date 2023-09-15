@@ -51,8 +51,33 @@ Write about how to use this project.
 $ add installations steps if you have to.
 ```
 
-###  :package: Commands
-- To run and check all the spec files aavialbale
+###  :package: Installation Commands
+
+- Installing Cypress
+```
+$ npm install cypress --save-dev
+
+```
+```
+$ npm update
+
+```
+```
+$ npx install cypress
+
+```
+- Installing bade ball cypress cucumber preprocessor -- Requires changes to --> package.json, cypress.config.js
+```
+$ npm install @badeball/cypress-cucumber-preprocessor
+
+```
+- Installing Cucumber Multiple HTML Report -- Requires Separate Configuration --> cucumber-html-report.js
+```
+$ npm install multiple-cucumber-html-reporter --save-dev
+
+```
+
+- To run and check all the spec files avialbale from browser dashboard
 ```
 $ npx cypress open 
 ```
