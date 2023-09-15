@@ -1,3 +1,7 @@
 ## Ignore Files for BDD 
+<<<<<<< HEAD
 node_modules/
-cucumber-json-formatter.exe
+             
+=======
+node_modules/
+>>>>>>> stage
