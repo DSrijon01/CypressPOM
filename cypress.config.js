@@ -16,7 +16,7 @@ module.exports = defineConfig({
   projectId: 'vun133',
   e2e: {
     setupNodeEvents,
-    specPattern: "**/*.feature"
+    specPattern: "**/*.{feature,cy.js}"
     
   },
 
