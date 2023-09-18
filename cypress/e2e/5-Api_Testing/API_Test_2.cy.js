@@ -3,7 +3,7 @@
 describe('My 10th Test Suite', function() 
 {
  
-it('Api Response Assertion',function() {
+it('Api Request Assertion',function() {
 
     cy.visit("https://rahulshettyacademy.com/angularAppdemo/")
     cy.wait(2000)
@@ -43,13 +43,6 @@ cy.wait('@bookretrievals').then(({request,response})=>
 
 
 })
-
-// 
-
-
-
-
-
 
 })
  

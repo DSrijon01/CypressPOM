@@ -33,7 +33,6 @@ cy.get('.btn-primary').click()
 cy.wait('@bookretrievals') 
 cy.get('p').should('have.text', "Oops only 1 Book available")
 
-// 
 
 
 

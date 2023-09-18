@@ -3,11 +3,11 @@
 describe('My 11th Test Suite', function() 
 {
  
-it('Api Request Assertion',function() {
+it('Api Request Mock Invalidity Check',function() {
 
     cy.visit("https://rahulshettyacademy.com/angularAppdemo/")
 
-// API request MOCk 
+// API request MOCk Invalid Edge Case
 cy.intercept('GET', 'https://rahulshettyacademy.com/Library/GetBook.php?AuthorName=shetty', (req)=>
 
 {
@@ -19,15 +19,9 @@ cy.intercept('GET', 'https://rahulshettyacademy.com/Library/GetBook.php?AuthorNa
 
     })
 
-}
-
-).as("dummyUrl")
+}).as("dummyUrl")
 cy.get('.btn-primary').click()
 cy.wait('@dummyUrl')
-
-
-
-
 })
 
  

@@ -179,8 +179,9 @@ After this, changes will be merged.
 
 
 ### :exclamation: Issues I faced 
-Same Origin Policy 
-Cucumber Pre-Processor Integration
+- Same Origin Policy 
+- Cucumber Pre-Processor Integration
+- Node Modules Rebuild
 
 
 ## :question: FAQ
