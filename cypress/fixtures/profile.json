@@ -3,5 +3,5 @@
   "name": "Jane",
   "gender":"Female",
   "email": "jane@example.com",
-  "productName": ["iphone X"]
+  "productName": ["iphone X", "Samsung Note 8"]
 }

@@ -12,7 +12,8 @@
 # Test Automation With Cypress
 <code><img height="30" src="https://raw.githubusercontent.com/github/explore/80688e429a7d4ef2fca1e82350fe8e3517d3494d/topics/javascript/javascript.png"></code>
 <code><img height="30" src="https://github.com/simple-icons/simple-icons/blob/master/icons/cypress.svg"></code>
-
+<code><img height="30" src="https://github.com/simple-icons/simple-icons/blob/master/icons/cucumber.svg"></code>
+<code><img height="30" src="https://www.vectorlogo.zone/logos/jenkins/jenkins-ar21.svg"></code>
 
 ## :ledger: Index
 
@@ -37,29 +38,59 @@
 - [License](#lock-license)
 
 ##  :beginner: About
-Add a detailed introduction about the project here, everything you want the reader to know.
+Cypress as a new automation framework has gained a lot traction with adaptation as an automation tool. Given the demand and for my own personal learning i have inititated this repo to understand integrate and build the framework for future boilertemplating purposes and to also practice my pragmatic programming. I will be adding as much details as possible in the code (Stepwise explanation) as well as in here for anyone new to start understanding it the way i did. Thanks!
 
 ## :zap: Usage
 Write about how to use this project.
 
 ###  :electric_plug: Installation
 - Steps on how to install this project, to use it.
-- Be very detailed here, For example, if you have tools which run on different operating systems, write installation steps for all of them.
+- ## Note: Due to the constant version upgrade of the framework other dependent packages requires specific configuration as till now. So I am creating separate branches for each. As I still am learning this I will definitely merge it to the main. 
 
 ```
 $ add installations steps if you have to.
 ```
 
-###  :package: Commands
-- Commands to start the project.
+###  :package: Installation Commands
+
+- Installing Cypress
+```
+$ npm install cypress --save-dev
+
+```
+```
+$ npm update
+
+```
+```
+$ npx install cypress
+
+```
+- Installing bade ball cypress cucumber preprocessor -- Requires changes to --> package.json, cypress.config.js
+```
+$ npm install @badeball/cypress-cucumber-preprocessor
+
+```
+- Installing Cucumber Multiple HTML Report -- Requires Separate Configuration --> cucumber-html-report.js
+```
+$ npm install multiple-cucumber-html-reporter --save-dev
+
+```
+
+- To run and check all the spec files avialbale from browser dashboard
+```
+$ npx cypress open 
+```
+
 
 ##  :wrench: Development
 If you want other people to contribute to this project, this is the section, make sure you always add this.
 
 ### :notebook: Pre-Requisites
 List all the pre-requisites the system needs to develop this project.
-- A tool
-- B tool
+- JDK JRE Environment Version 17 19 21 (Version Specific for Jenkins Support)
+- Cypress 
+- cypress-cucumber-preprocessor
 
 ###  :nut_and_bolt: Development Environment
 Write about setting up the working environment for your project.
@@ -125,11 +156,13 @@ If it's open-source, talk about the community here, ask social media links and o
 
  I use an agile continuous integration methodology, so the version is frequently updated and development is really fast.
 
-1. **`stage`** is the development branch.
+1. **`dev`** is the development branch.
 
-2. **`master`** is the production branch.
+2. **`stage`** is the experiment branch.
 
-3. No other permanent branches should be created in the main repository, you can create feature branches but they should get merged with the master.
+3. **`main`** is the stable branch for anyone to quickly run and learn about the project. 
+
+4. No other permanent branches should be created in the main repository, you can create feature branches but they should not get merged with the main.
 
 **Steps to work with feature branch**
 
@@ -145,21 +178,24 @@ If it's open-source, talk about the community here, ask social media links and o
 After this, changes will be merged.
 
 
-### :exclamation: Guideline
-coding guidelines or other things you want people to follow should follow.
+### :exclamation: Issues I faced 
+Same Origin Policy 
+Cucumber Pre-Processor Integration
 
 
 ## :question: FAQ
 You can optionally add a FAQ section about the project.
 
 ##  :page_facing_up: Resources
-Add important resources here
+Its a Package Dependency Please Go Through the documentation
+https://github.com/badeball/cypress-cucumber-preprocessor/tree/master
 
 ##  :camera: Gallery
 Pictures of your project.
 
 ## :star2: Credit/Acknowledgment
-Credit the authors here.
+Rahul Shetty From QA Academy
 
 ##  :lock: License
-Add a license here, or a link to it.
+ISC
+MIT
