@@ -99,7 +99,7 @@ Write about setting up the working environment for your project.
 
 
 ###  :file_folder: File Structure
-Add a file structure here with the basic details about files, below is an example.
+File Structure to navigate the project.
 
 ```
 .
@@ -154,7 +154,7 @@ If it's open-source, talk about the community here, ask social media links and o
 
  ### :cactus: Branches
 
- I use an agile continuous integration methodology, so the version is frequently updated and development is really fast.
+ I am using an agile continuous integration methodology, so the version is frequently updated and development is really fast.
 
 1. **`dev`** is the development branch.
 
@@ -182,6 +182,7 @@ After this, changes will be merged.
 - Same Origin Policy 
 - Cucumber Pre-Processor Integration
 - Node Modules Rebuild
+- Spec Pattern for .feature and .cy.js extension recognition (cypress.config.js --> specPattern: "**/*.{feature,cy.js}")
 
 
 ## :question: FAQ

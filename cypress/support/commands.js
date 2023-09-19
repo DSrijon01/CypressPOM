@@ -24,13 +24,22 @@
 // -- This will overwrite an existing command --
 // Cypress.Commands.overwrite('visit', (originalFn, url, options) => { ... })
 Cypress.Commands.add("selectProduct", (productName) => { 
-    cy.get('h4.card-title').each(($el, index, $list) => {
-        if($el.text().includes(productName))
-        {
-            cy.get('button.btn.btn-info').eq(index).click()
-        }
-        
-        })
+  cy.get('h4.card-title').each(($el, index, $list) => {
+      if($el.text().includes(productName))
+      {
+          cy.get('button.btn.btn-info').eq(index).click()
+      }
+  });
+});
 
-
-})
+// Define the LoginApi command outside of the selectProduct command
+Cypress.Commands.add("LoginApi", () => {
+  cy.request("POST", "https://rahulshettyacademy.com/client", {
+      userEmail: "sbs23@gmail.com",
+      userPassword: "SBS121212b"
+  }).then(function (response) {
+      expect(response.status).to.eq(200);
+      // Get the token for Session Holding through using environment variable
+      Cypress.env('token', response.body.token);
+  });
+});

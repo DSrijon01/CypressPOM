@@ -16,7 +16,8 @@ module.exports = defineConfig({
   projectId: 'vun133',
   e2e: {
     setupNodeEvents,
-    specPattern: "**/*.{feature,cy.js}"
+    specPattern: "**/*.{feature,cy.js}",
+    supportFile: "cypress/support/e2e.js"
     
   },
 
