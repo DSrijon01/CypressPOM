@@ -23,6 +23,7 @@
 //
 // -- This will overwrite an existing command --
 // Cypress.Commands.overwrite('visit', (originalFn, url, options) => { ... })
+// commands.js
 Cypress.Commands.add("selectProduct", (productName) => { 
   cy.get('h4.card-title').each(($el, index, $list) => {
       if($el.text().includes(productName))
@@ -33,13 +34,20 @@ Cypress.Commands.add("selectProduct", (productName) => {
 });
 
 // Define the LoginApi command outside of the selectProduct command
-Cypress.Commands.add("LoginApi", () => {
-  cy.request("POST", "https://rahulshettyacademy.com/client", {
-      userEmail: "sbs23@gmail.com",
-      userPassword: "SBS121212b"
-  }).then(function (response) {
-      expect(response.status).to.eq(200);
-      // Get the token for Session Holding through using environment variable
-      Cypress.env('token', response.body.token);
+Cypress.Commands.add("loginFromFile", () => {
+  // Read the credentials from the file
+  cy.readFile("credentials.txt").then((content) => {
+    const [username, password] = content.split("\n");
+    
+    // Visit the login page
+    cy.visit("https://rahulshettyacademy.com/client");
+
+    // Fill in the username and password fields
+    cy.get("#userEmail").type(username);
+    cy.get("#userPassword").type(password);
+
+    // Click on the login button
+    cy.get("#login").click();
   });
 });
+

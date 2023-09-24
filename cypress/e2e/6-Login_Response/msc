@@ -1,0 +1,30 @@
+describe('Session test', function () {
+  it('Using Custom Command and Env to login and Share Session Tokens', function () {
+    // Call the LoginApi custom command
+    cy.visit("https://rahulshettyacademy.com/client")
+    cy.LoginApi().then(function() {
+      // Add your test code here
+      // For example, you can visit the dashboard page
+      cy.get('#login').click()
+      // cy.visit("https://rahulshettyacademy.com/dashboard/dash")
+      // cy.visit("https://rahulshettyacademy.com/dashboard/dash",{
+      //   onBeforeLoad :function(window)
+
+      //       {
+
+      //           window.localStorage.setItem('token',Cypress.env('token'))
+
+      //       }
+
+
+        
+      //   })
+      
+      // Add any further test steps or assertions here
+      cy.get('#login').click()
+      
+      // cy.url().should('equal', 'https://rahulshettyacademy.com/dsashboard/dash')  
+      cy.get("card-body button:last-of-type").eq(1).click()
+    });
+  });
+});
