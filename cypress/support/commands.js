@@ -41,13 +41,13 @@ Cypress.Commands.add("loginFromFile", () => {
     
     // Visit the login page
     cy.visit("https://rahulshettyacademy.com/client");
-
+    cy.wait(1000)
     // Fill in the username and password fields
     cy.get("#userEmail").type(username);
     cy.get("#userPassword").type(password);
-
+    cy.wait(1000)
     // Click on the login button
-    cy.get("#login").click();
+    // cy.get("#login").click();
   });
 });
 

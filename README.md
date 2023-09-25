@@ -71,12 +71,20 @@ $ npx install cypress
 $ npm install @badeball/cypress-cucumber-preprocessor
 
 ```
+- To run and check all the spec files avialbale from browser dashboard
+```
+$  npm install @cypress/browserify-preprocessor --save-dev
+```
 - Installing Cucumber Multiple HTML Report -- Requires Separate Configuration --> cucumber-html-report.js
 ```
 $ npm install multiple-cucumber-html-reporter --save-dev
 
 ```
+- Installing neat CSV to read and write CSV files 
+```
+$ npm install neat-csv
 
+```
 - To run and check all the spec files avialbale from browser dashboard
 ```
 $ npx cypress open 
@@ -183,6 +191,7 @@ After this, changes will be merged.
 - Cucumber Pre-Processor Integration
 - Node Modules Rebuild
 - Spec Pattern for .feature and .cy.js extension recognition (cypress.config.js --> specPattern: "**/*.{feature,cy.js}")
+- onBeforeLoad for Session Token initialization for Login
 
 
 ## :question: FAQ
