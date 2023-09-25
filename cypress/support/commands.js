@@ -51,3 +51,20 @@ Cypress.Commands.add("loginFromFile", () => {
   });
 });
 
+// Define the LoginApi command outside of the selectProduct command
+Cypress.Commands.add("loginorange", () => {
+  // Read the credentials from the file
+  cy.readFile("orangecrm.txt").then((content) => {
+    const [username, password] = content.split("\n");
+    
+    // Visit the login page
+    cy.visit("https://opensource-demo.orangehrmlive.com/");
+
+    // Fill in the username and password fields
+    cy.get('input[name="username"]').type(username);
+    cy.get('input[name="password"]').type(password);
+
+    // Click on the login button
+    cy.get('.oxd-button').click();
+  });
+});
