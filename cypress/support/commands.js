@@ -68,3 +68,4 @@ Cypress.Commands.add("loginorange", () => {
     cy.get('.oxd-button').click();
   });
 });
+

@@ -18,3 +18,9 @@ import './commands'
 
 // Alternatively you can use CommonJS syntax:
 // require('./commands')
+
+// Import the SQL server commands from the Cypress SQL Server plugin
+import sqlServer from 'cypress-sql-server';
+
+// Load the SQL server commands
+sqlServer.loadDBCommands();
