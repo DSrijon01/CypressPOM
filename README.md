@@ -14,6 +14,7 @@
 <code><img height="30" src="https://github.com/simple-icons/simple-icons/blob/master/icons/cypress.svg"></code>
 <code><img height="30" src="https://github.com/simple-icons/simple-icons/blob/master/icons/cucumber.svg"></code>
 <code><img height="30" src="https://www.vectorlogo.zone/logos/jenkins/jenkins-ar21.svg"></code>
+<code><img height="30" src="https://github.com/simple-icons/simple-icons/blob/master/icons/microsoftazure.svg"></code>
 
 ## :ledger: Index
 
@@ -38,7 +39,7 @@
 - [License](#lock-license)
 
 ##  :beginner: About
-Cypress as a new automation framework has gained a lot traction with adaptation as an automation tool. Given the demand and for my own personal learning i have inititated this repo to understand integrate and build the framework for future boilertemplating purposes and to also practice my pragmatic programming. I will be adding as much details as possible in the code (Stepwise explanation) as well as in here for anyone new to start understanding it the way i did. Thanks!
+Cypress as a new automation framework has gained a lot traction with adaptation as an automation tool. Given the demand and for my own personal learning i have inititated this repo to understand integrate and build the framework around differernt sites for automation and future boilertemplating purposes and to also practice my pragmatic programming. I will be adding as much details as possible in the code (Stepwise explanation) as well as in here for anyone new to start understanding it the way i did. Thanks!
 
 ## :zap: Usage
 Write about how to use this project.
@@ -46,10 +47,6 @@ Write about how to use this project.
 ###  :electric_plug: Installation
 - Steps on how to install this project, to use it.
 - ## Note: Due to the constant version upgrade of the framework other dependent packages requires specific configuration as till now. So I am creating separate branches for each. As I still am learning this I will definitely merge it to the main. 
-
-```
-$ add installations steps if you have to.
-```
 
 ###  :package: Installation Commands
 
@@ -71,7 +68,7 @@ $ npx install cypress
 $ npm install @badeball/cypress-cucumber-preprocessor
 
 ```
-- To run and check all the spec files avialbale from browser dashboard
+- Installing Browserify Preprocessor for BDD integration
 ```
 $  npm install @cypress/browserify-preprocessor --save-dev
 ```
@@ -92,13 +89,14 @@ $ npx cypress open
 
 
 ##  :wrench: Development
-If you want other people to contribute to this project, this is the section, make sure you always add this.
+If you want to colab please read through. 
 
 ### :notebook: Pre-Requisites
 List all the pre-requisites the system needs to develop this project.
 - JDK JRE Environment Version 17 19 21 (Version Specific for Jenkins Support)
 - Cypress 
 - cypress-cucumber-preprocessor
+- neatCSV
 
 ###  :nut_and_bolt: Development Environment
 Write about setting up the working environment for your project.
