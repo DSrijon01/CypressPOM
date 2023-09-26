@@ -3,13 +3,20 @@
 /// <reference types="Cypress" />
 // Neat CSV to read and write CSV files 
 import neatCSV from 'neat-csv';
+const csv = require('neat-csv')
+let productName
+
 
 
 describe('Session test', function () {
-  it('Using Custom Command and Env to login and Share Session Tokens', function () {
+  it('Using Custom Command to login ', function () {
     cy.loginFromFile();
     // Verify Log in through URL validation 
     cy.url().should('eq', 'https://rahulshettyacademy.com/client/dashboard/dash');
+    // Mapping Prodcut value to Verify with CSV
+    cy.get(".card-body b").eq(1).should('exist').then(function (ele) {
+      productName = ele.text(); // Assign value to productName
+    })
     // Add shopping items to the cart 
     cy.get(".card-body button:last-of-type").eq(1).click()
     // Move to the next page through cart 

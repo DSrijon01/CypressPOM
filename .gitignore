@@ -1,2 +1,6 @@
 ## Ignore Files for BDD 
 node_modules/
+
+# Ignore Excel temporary files
+~$*.xlsx
+~$*.csv

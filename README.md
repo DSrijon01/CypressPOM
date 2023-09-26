@@ -82,7 +82,7 @@ $ npm install multiple-cucumber-html-reporter --save-dev
 ```
 - Installing neat CSV to read and write CSV files 
 ```
-$ npm install neat-csv
+$ npm install neat-csv@v5.2.0
 
 ```
 - To run and check all the spec files avialbale from browser dashboard
@@ -192,6 +192,7 @@ After this, changes will be merged.
 - Node Modules Rebuild
 - Spec Pattern for .feature and .cy.js extension recognition (cypress.config.js --> specPattern: "**/*.{feature,cy.js}")
 - onBeforeLoad for Session Token initialization for Login
+- Neat CSV Import version dependency for CSV Assertion
 
 
 ## :question: FAQ
