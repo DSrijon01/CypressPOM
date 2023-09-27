@@ -14,7 +14,7 @@
 <code><img height="30" src="https://github.com/simple-icons/simple-icons/blob/master/icons/cypress.svg"></code>
 <code><img height="30" src="https://github.com/simple-icons/simple-icons/blob/master/icons/cucumber.svg"></code>
 <code><img height="30" src="https://www.vectorlogo.zone/logos/jenkins/jenkins-ar21.svg"></code>
-<code><img height="30" src=""></code>
+<code><img height="30" src="https://github.com/simple-icons/simple-icons/blob/master/icons/microsoftazure.svg"></code>
 
 ## :ledger: Index
 
