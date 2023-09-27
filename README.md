@@ -82,9 +82,13 @@ $ npm install multiple-cucumber-html-reporter --save-dev
 $ npm install neat-csv@v5.2.0
 
 ```
-- To integrate Database and fetch data from the Database
+- To integrate Database and fetch data from the Database Requires Changes --> e2e.js, cypress.config.js
 ```
 $ npm install --save-dev cypress-sql-server
+```
+- To run and check all the spec files avialbale from browser dashboard
+```
+$ npm install convert-excel-to-json
 ```
 - To run and check all the spec files avialbale from browser dashboard
 ```
@@ -202,13 +206,16 @@ You can optionally add a FAQ section about the project.
 ##  :page_facing_up: Resources
 
 - For BDD integration there is a Plugin Dependency Please Go Through the documentation if any changes occurs in the Future
-[Badeball_Cypress_Cucumber_Preprocessor]https://github.com/badeball/cypress-cucumber-preprocessor/tree/master
+[Badeball_Cypress_Cucumber_Preprocessor](https://github.com/badeball/cypress-cucumber-preprocessor/tree/master)
 
 - For CSV file verification and read write  there is a Package Dependency Please Go Through the documentation if any changes occurs in the Future
-[Read_CSV_Data_In_Cypress]https://medium.com/@anshita.bhasin/read-csv-data-in-cypress-57b1792c6945 
+[Read_CSV_Data_In_Cypress](https://medium.com/@anshita.bhasin/read-csv-data-in-cypress-57b1792c6945) 
+
+- For Excel file verification and read write  there is a Package Dependency Please Go Through the documentation if any changes occurs in the Future
+[Read_CSV_Data_In_Cypress](https://www.npmjs.com/package/convert-excel-to-json) 
 
 - For SQLDatabase data fetching and verifying there is a Plugin Dependency Please Go Through the documentation if any changes occurs in the Future
-[Cypress_SQL_Server]https://www.npmjs.com/package/cypress-sql-server 
+[Cypress_SQL_Server](https://www.npmjs.com/package/cypress-sql-server) 
 
 
 ##  :camera: Gallery
