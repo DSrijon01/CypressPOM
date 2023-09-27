@@ -69,3 +69,6 @@ Cypress.Commands.add("loginorange", () => {
   });
 });
 
+Cypress.Commands.add('excelToJsonConverter', (filepath) => {
+  return cy.task('excelToJsonConverter', filepath);
+});

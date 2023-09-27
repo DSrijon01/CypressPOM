@@ -24,3 +24,4 @@ import sqlServer from 'cypress-sql-server';
 
 // Load the SQL server commands
 sqlServer.loadDBCommands();
+

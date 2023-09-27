@@ -36,19 +36,23 @@ describe('Session test', function () {
 
     // Excel Generated Data and Selected Product Validation
     // File Path for Exel file
-    const filepath = cy.readFile(Cypress.config("fileServerFolder")+"/cypress/downloads/order-invoice_sbs23.xlsx")
+    
+    const filepath = cy.readFile(Cypress.config("fileServerFolder")+"/cypress/downloads/order-invoice_sbs23(1).xlsx")
     
     // Calling in the task for Excel File read and write
-   // Calling in the task for Excel File read and write
-    cy.task('excelToJsonConverter', filepath).then(function (result) {
-        
-        cy.log(result)
-    
-    })
+    cy.excelToJsonConverter(filepath).then((result) => {
+        // Verify that the result contains the product name
+        expect(result).to.deep.include({ productName });
+      });
   
+    // cy.readFile(filepath).then(function(text){
+    //     expect(text.to.include(productName))
+    // })
 
-    
-
+    // One Workaround
+    // const filepath = cy.readFile(Cypress.config("fileServerFolder")+"/cypress/downloads/order-invoice_sbs23(1).xlsx").then(function(text){
+    //     expect(text).to.include(productName)
+    //     })
 
 
 
