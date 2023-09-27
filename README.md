@@ -14,7 +14,7 @@
 <code><img height="30" src="https://github.com/simple-icons/simple-icons/blob/master/icons/cypress.svg"></code>
 <code><img height="30" src="https://github.com/simple-icons/simple-icons/blob/master/icons/cucumber.svg"></code>
 <code><img height="30" src="https://www.vectorlogo.zone/logos/jenkins/jenkins-ar21.svg"></code>
-<code><img height="30" src="https://github.com/simple-icons/simple-icons/blob/master/icons/microsoftazure.svg"></code>
+<code><img height="30" src=""></code>
 
 ## :ledger: Index
 
@@ -82,11 +82,14 @@ $ npm install multiple-cucumber-html-reporter --save-dev
 $ npm install neat-csv@v5.2.0
 
 ```
+- To integrate Database and fetch data from the Database
+```
+$ npm install --save-dev cypress-sql-server
+```
 - To run and check all the spec files avialbale from browser dashboard
 ```
 $ npx cypress open 
 ```
-
 
 ##  :wrench: Development
 If you want to colab please read through. 
@@ -197,8 +200,16 @@ After this, changes will be merged.
 You can optionally add a FAQ section about the project.
 
 ##  :page_facing_up: Resources
-Its a Package Dependency Please Go Through the documentation
-https://github.com/badeball/cypress-cucumber-preprocessor/tree/master
+
+- For BDD integration there is a Plugin Dependency Please Go Through the documentation if any changes occurs in the Future
+[Badeball_Cypress_Cucumber_Preprocessor]https://github.com/badeball/cypress-cucumber-preprocessor/tree/master
+
+- For CSV file verification and read write  there is a Package Dependency Please Go Through the documentation if any changes occurs in the Future
+[Read_CSV_Data_In_Cypress]https://medium.com/@anshita.bhasin/read-csv-data-in-cypress-57b1792c6945 
+
+- For SQLDatabase data fetching and verifying there is a Plugin Dependency Please Go Through the documentation if any changes occurs in the Future
+[Cypress_SQL_Server]https://www.npmjs.com/package/cypress-sql-server 
+
 
 ##  :camera: Gallery
 Pictures of your project.
