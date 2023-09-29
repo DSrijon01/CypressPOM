@@ -11,32 +11,25 @@ const csv = require('neat-csv')
 const excelToJson = require('convert-excel-to-json');
 const fs = require('fs');
 
-
-
 async function setupNodeEvents(on, config) {
-
   // Db Configuration 
   config.db = {
     userName: "srijon",
     password: "Azure!10",
     server: "cypresspomdb.database.windows.net",
     options: {
-        database: "cypresspomdb",
-        encrypt: true,
-        rowCollectionOnRequestCompletion : true
+      database: "cypresspomdb",
+      encrypt: true,
+      rowCollectionOnRequestCompletion: true
     }
-}
+  }
 
   // This is required for the preprocessor to be able to generate JSON reports after each run, and more,
-  
   await preprocessor.addCucumberPreprocessorPlugin(on, config);
-
   on("file:preprocessor", browserify.default(config));
-  
+
   // SQL server plugin setup
-  
-  tasks = sqlServer.loadDBPlugin(config.db);
-  
+  const tasks = sqlServer.loadDBPlugin(config.db);
   on('task', tasks);
 
   // Excel File Read Write Task 
@@ -48,7 +41,6 @@ async function setupNodeEvents(on, config) {
       return result;
     }
   })
-  
 
   // Make sure to return the config object as it might have been modified by the plugin.
   return config;
@@ -60,9 +52,5 @@ module.exports = defineConfig({
     setupNodeEvents,
     specPattern: "**/*.{feature,cy.js}",
     supportFile: "cypress/support/e2e.js"
-    
-    
   },
-
-  
 });

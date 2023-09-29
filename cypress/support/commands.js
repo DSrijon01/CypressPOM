@@ -69,6 +69,14 @@ Cypress.Commands.add("loginorange", () => {
   });
 });
 
-Cypress.Commands.add('excelToJsonConverter', (filepath) => {
-  return cy.task('excelToJsonConverter', filepath);
+
+// Define a custom task
+Cypress.Commands.add('excelToJsonConverter', { prevSubject: false }, (filepath) => {
+  // Implementation of the task
+  const excelToJson = require('convert-excel-to-json');
+  const fs = require('fs');
+  const result = excelToJson({
+    source: fs.readFileSync(filepath),
+  });
+  return result;
 });

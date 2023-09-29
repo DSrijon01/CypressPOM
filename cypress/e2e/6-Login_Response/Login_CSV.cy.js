@@ -41,6 +41,7 @@ describe('Session test', function () {
 
     // CSV and Selected Product Assertion
     // Making the file server folder dynamic through config
+
     cy.readFile(Cypress.config("fileServerFolder")+"/cypress/downloads/order-invoice_sbs23.csv").then(async(text)=> 
     {
     const csv =  await neatCSV(text)
@@ -51,7 +52,7 @@ describe('Session test', function () {
 
     expect(productName).to.equal(actualProductCSV)
   })
-    
+
   });
 });
 
